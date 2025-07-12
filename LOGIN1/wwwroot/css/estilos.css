@@ -1,0 +1,401 @@
+﻿
+
+
+/* ===================== */
+/* NAVBAR INFRUIT */
+/* ===================== */
+.navbar {
+    background: linear-gradient(90deg, #f26522, #ffa94d);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+    .navbar-brand img {
+        height: 45px;
+        margin-right: 10px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+    }
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #fffde6 !important;
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background: #fff;
+        transition: width 0.3s ease-in-out;
+        margin-top: 4px;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%;
+    }
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===================== */
+/* CARRUSEL INFRUIT */
+/* ===================== */
+.carousel-item img {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del texto */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más visible */
+    padding: 25px 30px;
+    border-radius: 15px;
+    bottom: 15%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+    /* Título del slide */
+    .carousel-caption h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Subtítulo */
+    .carousel-caption span {
+        font-size: 1.3rem;
+        font-style: italic;
+        letter-spacing: 1px;
+        color: #ffd580;
+    }
+
+/* Animación para entrada del texto */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botones de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Indicadores */
+.carousel-indicators [data-bs-target] {
+    background-color: #ffa94d;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #f26522;
+}
+
+/* ===================== */
+/* CARRUCEL DE CATEGORÍAS 3D */
+/* ===================== */
+#contentContainer {
+    perspective: 1000px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#carouselContainer {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform: translateZ(-300px);
+}
+
+.carouselItem {
+    width: 360px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -240px 0 0 -180px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 25px;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .carouselItem:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+.carouselItemInner img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carouselItemInner p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* FORMULARIO REGISTRO Y LOGIN */
+
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* FOOTER INFRUIT */
+
+.footer-infruit {
+    background: linear-gradient(90deg, #f26522, #ffa94d);
+    color: #fff9e6;
+    padding: 40px 0;
+    border-top: 4px solid #ffae6d;
+    text-align: center;
+}
+
+    .footer-infruit .social-icons a {
+        color: #fff;
+        margin: 0 12px;
+        transition: transform 0.3s ease, color 0.3s;
+    }
+
+        .footer-infruit .social-icons a:hover {
+            color: #ffd700;
+            transform: scale(1.2);
+        }
+
+    .footer-infruit .footer-mail {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+        .footer-infruit .footer-mail:hover {
+            color: #ffe8c7;
+        }
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .carouselItem {
+        width: 220px;
+        height: 320px;
+        margin: -160px 0 0 -110px;
+    }
+
+    .carouselItemInner img {
+        width: 180px;
+        height: 140px;
+    }
+
+    .carouselItemInner p {
+        font-size: 1.1rem;
+    }
+
+    .footer-infruit {
+        font-size: 14px;
+    }
+
+        .footer-infruit .social-icons a {
+            margin: 0 8px;
+        }
+
+   
+    /* CARRITO*/
+ 
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: #ff7f00;
+        }
+
+        .table thead {
+            background-color: #f26522;
+            color: white;
+        }
+
+        .table tbody tr {
+            vertical-align: middle;
+        }
+
+        .table img {
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background-color: #b02a37;
+        }
+
+        .table td, .table th {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .table-responsive {
+                font-size: 0.9rem;
+            }
+
+            .table img {
+                width: 50px;
+            }
+
+
+
+
+            /* ESTILOS FORMULARIO LOGIN */
+          
+                
+
+
+            /* ESTILOS PAGINA ADMINISTRADOR*/
+            
+            .admin-panel {
+                padding: 40px 20px;
+                background-color: #f8f9fa;
+                min-height: 100vh;
+            }
+
+            .admin-title {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 30px;
+            }
+
+            .card-admin {
+                transition: transform 0.2s ease;
+                border-left: 5px solid orange;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            }
+
+                .card-admin:hover {
+                    transform: scale(1.02);
+                }
+
+                .card-admin .card-title {
+                    font-size: 1.2rem;
+                    color: #555;
+                }
+
+                .card-admin .btn {
+                    background-color: orange;
+                    border: none;
+                }
+
+                    .card-admin .btn:hover {
+                        background-color: darkorange;
+                    }
+
+
+                    /*Panel de administracion*/
+            .admin-title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .card-admin {
+                border-radius: 15px;
+                background: #f8f9fa;
+                transition: transform 0.2s ease;
+            }
+
+                .card-admin:hover {
+                    transform: scale(1.02);
+                }
+
+                .card-admin .btn {
+                    background-color: #fd7e14;
+                    border: none;
+                }
+
+                    .card-admin .btn:hover {
+                        background-color: #f26522;
+                    }
+
+        }
+}

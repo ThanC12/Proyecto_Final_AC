@@ -1,0 +1,49 @@
+﻿@model LOGIN1.Models.Producto
+@{
+    ViewData["Title"] = "Crear Producto";
+}
+
+<h2>Crear Producto</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Stock"></label>
+        <input asp-for="Stock" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoriaId">Categoría</label>
+        <select asp-for="CategoriaId" class="form-select" asp-items="@(new SelectList(ViewBag.Categorias, "Id", "Nombre"))">
+            <option value="">Seleccione una categoría</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="Imagen">Imagen del producto</label>
+        <input type="file" name="Imagen" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ruta de Imagen (relativa)</label>
+        <input asp-for="ImagenUrl" class="form-control" placeholder="/infruit/jugos/jugo-naranja.png" />
+        <span asp-validation-for="ImagenUrl" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

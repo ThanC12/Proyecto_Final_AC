@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Panel de Administración";
+}
+
+<div class="admin-panel container py-5">
+    <h2 class="admin-title mb-4 text-center">Panel de Administración</h2>
+
+    <div class="row g-4 justify-content-center">
+        <!-- Tarjeta de Productos -->
+        <div class="col-md-4">
+            <div class="card card-admin shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🛒 Productos</h5>
+                    <p class="card-text">Gestiona los productos del sistema.</p>
+                    <a href="@Url.Action("Index", "Producto")" class="btn btn-sm btn-primary">Ir a productos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Categorías -->
+        <div class="col-md-4">
+            <div class="card card-admin shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">📂 Categorías</h5>
+                    <p class="card-text">Gestiona las categorías de productos.</p>
+                    <a href="@Url.Action("Index", "Categoria")" class="btn btn-sm btn-primary">Ir a categorías</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Usuarios -->
+        <div class="col-md-4">
+            <div class="card card-admin shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">👤 Usuarios</h5>
+                    <p class="card-text">Ver y administrar usuarios registrados.</p>
+                    <a href="@Url.Action("Index", "UsuarioAdmin")" class="btn btn-sm btn-primary">Ver usuarios</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

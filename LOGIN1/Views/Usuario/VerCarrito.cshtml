@@ -1,0 +1,39 @@
+﻿@model List<LOGIN1.Models.Carrito>
+
+<h2>🛒 Carrito de Compras</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Producto.Nombre</td>
+                <td>$@item.Producto.Precio</td>
+                <td>@item.Cantidad</td>
+                <td>$@(item.Producto.Precio* item.Cantidad)</td>
+                <td>
+                    <form asp-action="EliminarDelCarrito" method="post">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Any())
+{
+    <form asp-controller="Factura" asp-action="Confirmar" method="get">
+        <button type="submit" class="btn btn-success mt-3">🧾 Finalizar Compra</button>
+    </form>
+}

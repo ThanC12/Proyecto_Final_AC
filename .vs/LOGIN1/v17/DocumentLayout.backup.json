@@ -1,0 +1,342 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\viewmodels\\facturadetallevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\viewmodels\\facturadetallevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\producto\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\producto\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\viewmodels\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\viewmodels\\usuariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\acceso\\registrarse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\acceso\\registrarse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\wwwroot\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\wwwroot\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\producto\\porcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\producto\\porcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|c:\\users\\thanc\\source\\repos\\login1\\login1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CB732548-D6D7-4648-951F-4FC6819857D8}|LOGIN1\\LOGIN1.csproj|solutionrelative:login1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Producto\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\Eliminar.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Producto\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T08:12:59.217Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FacturaDetalleVM.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\FacturaDetalleVM.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\ViewModels\\FacturaDetalleVM.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\FacturaDetalleVM.cs",
+              "RelativeToolTip": "LOGIN1\\ViewModels\\FacturaDetalleVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:53:53.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "LOGIN1\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:06:20.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "LOGIN1\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T20:00:20.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccesoController.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\AccesoController.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\AccesoController.cs",
+              "RelativeToolTip": "LOGIN1\\Controllers\\AccesoController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T20:00:21.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\LoginVM.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\ViewModels\\LoginVM.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\LoginVM.cs",
+              "RelativeToolTip": "LOGIN1\\ViewModels\\LoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:53:49.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioVM.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\UsuarioVM.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\ViewModels\\UsuarioVM.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\ViewModels\\UsuarioVM.cs",
+              "RelativeToolTip": "LOGIN1\\ViewModels\\UsuarioVM.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:53:51.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Carrito.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Carrito.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Models\\Carrito.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Carrito.cs",
+              "RelativeToolTip": "LOGIN1\\Models\\Carrito.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:53:37.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PorCategoria.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\PorCategoria.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Producto\\PorCategoria.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\PorCategoria.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Producto\\PorCategoria.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T02:38:44.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "estilos.css",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\wwwroot\\css\\estilos.css",
+              "RelativeDocumentMoniker": "LOGIN1\\wwwroot\\css\\estilos.css",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\wwwroot\\css\\estilos.css",
+              "RelativeToolTip": "LOGIN1\\wwwroot\\css\\estilos.css",
+              "ViewState": "AgIAAEoBAAAAAAAAAAAAAFABAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-14T15:53:36.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Acceso\\Login.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Acceso\\Login.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Acceso\\Login.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Acceso\\Login.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:42:29.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Program.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Program.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Program.cs",
+              "RelativeToolTip": "LOGIN1\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:28:40.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Registrarse.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Acceso\\Registrarse.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Acceso\\Registrarse.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Acceso\\Registrarse.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Acceso\\Registrarse.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwD0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T03:42:56.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Usuario.cs",
+              "RelativeToolTip": "LOGIN1\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:23:17.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\Index.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Producto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Producto\\Index.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Producto\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T01:32:53.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "LOGIN1\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAIcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T01:30:58.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T17:13:50.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LOGIN1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LOGIN1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T16:48:24.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "LOGIN1\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\thanc\\source\\repos\\LOGIN1\\LOGIN1\\Models\\Producto.cs",
+              "RelativeToolTip": "LOGIN1\\Models\\Producto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T02:10:39.553Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

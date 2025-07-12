@@ -1,0 +1,341 @@
+﻿@using LOGIN1.Data
+@inject LOGIN1.Data.AppDbContext _context
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu archivo de estilos -->
+    <link rel="stylesheet" href="~/css/estilos.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Infruit</title>
+
+   
+    
+
+   
+  
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- ... código de navbar ... -->
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Producto" asp-action="Index">Productos</a>
+                </li>
+                <!-- Menú desplegable de categorías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown">
+                        Productos por Categoría
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                        @* Iterar sobre categorías desde la base de datos *@
+                        @foreach (var categoria in _context.Categorias.ToList())
+                        {
+                            <li>
+                                <a class="dropdown-item" asp-controller="Producto" asp-action="PorCategoria" asp-route-id="@categoria.Id">
+                                    @categoria.Nombre
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            </ul>
+            <!-- ... quizás formulario de búsqueda, etc ... -->
+        </div>
+    </nav>
+
+
+    <!-- CARRUSEL -->
+    <section class="testimonial py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- CARRUSEL CON FADE Y PAUSA AL HOVER -->
+                    <div id="carruselPrincipal" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="@Url.Content("/infruit/fondodepantalla/img.png")" class="d-block w-100" alt="Slide 1" />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2 class="text-light">INFRUIT</h2>
+                                    <span class="text-light">ES FRUTA</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@Url.Content("/infruit/fondodepantalla/img1.png")" class="d-block w-100" alt="Slide 2" />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2 class="text-light">DISFRUTA LO NATURAL</h2>
+                                    <span class="text-light">100% ORGÁNICO</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@Url.Content("/infruit/fondodepantalla/img2.png")" class="d-block w-100" alt="Slide 3" />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2 class="text-light">SABORES DEL ECUADOR</h2>
+                                    <span class="text-light">PULPAS FRESCAS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CONTROLES -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                        <!-- INDICADORES -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <section class="productos-section">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-12 mb-5">
+                    <h2 class="titulo-productos">🌟 NUESTROS MEJORES PRODUCTOS 🌟</h2>
+
+                    
+                    <div id="fps" style="color: #f26522; font-weight: bold; margin-top: 10px;">Framerate: 0/60 FPS</div>
+                </div>
+
+                <div id="contentContainer">
+                    <div id="carouselContainer">
+                        <figure class="carouselItem">
+                            <div class="carouselItemInner">
+                                <img src="https://955af41a.delivery.rocketcdn.me/wp-content/uploads/2023/07/pulpas-congeladas3.jpg" alt="Pulpas" />
+                                <p>🍑 Pulpas</p>
+                                <small>Fruta congelada lista para jugos, postres o helados.</small>
+                            </div>
+                        </figure>
+
+                        <figure class="carouselItem">
+                            <div class="carouselItemInner">
+                                <img src="https://zonales.quito.gob.ec/wp-content/uploads/pulpa-de-frutas-768x512-1.jpg" alt="Jugos" />
+                                <p>🍹 Jugos</p>
+                                <small>Bebidas naturales elaboradas 100% con frutas frescas.</small>
+                            </div>
+                        </figure>
+
+                        <figure class="carouselItem">
+                            <div class="carouselItemInner">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqkH6xViSkJn9hz5boTJNmFL3ucjM2WqEH1Repe891TBbM34VHyDebuTKoFPLZTCZWbd4t1kkD96RAcJHnyVPvJ7ehFnWFvZCj_xUKYuc" alt="Mermeladas" />
+                                <p>🍯 Mermeladas</p>
+                                <small>Conservas artesanales de frutas tropicales sin químicos.</small>
+                            </div>
+                        </figure>
+
+                        <figure class="carouselItem">
+                            <div class="carouselItemInner">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK4dOVxxYJmlNwj_pcN0iK2RARKzw2z5JPFA&s" alt="Ají" />
+                                <p>🌶️ Ají</p>
+                                <small>Salsas picantes artesanales con recetas tradicionales.</small>
+                            </div>
+                        </figure>
+
+                        <figure class="carouselItem">
+                            <div class="carouselItemInner">
+                                <img src="https://cdn.colombia.com/gastronomia/2017/01/06/ensalada-de-frutas-1704.gif" alt="Ensaladas" />
+                                <p>🥗 Ensaladas</p>
+                                <small>Mix fresco y saludable de frutas seleccionadas.</small>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+    <script>
+        var w, container, carousel, item, radius, itemLength, rY, ticker, fps;
+        var mouseX = 0;
+        var mouseY = 0;
+        var mouseZ = 0;
+        var addX = 0;
+
+        var fps_counter = {
+          tick: function () {
+            this.times = this.times.concat(+new Date());
+            var seconds, times = this.times;
+            if (times.length > this.span + 1) {
+              times.shift();
+              seconds = (times[times.length - 1] - times[0]) / 1000;
+              return Math.round(this.span / seconds);
+            } else return null;
+          },
+          times: [],
+          span: 20
+        };
+        var counter = Object.create(fps_counter);
+
+        $(document).ready(init);
+
+        function init() {
+          w = $(window);
+          container = $('#contentContainer');
+          carousel = $('#carouselContainer');
+          item = $('.carouselItem');
+          itemLength = item.length;
+          fps = $('#fps');
+          rY = 360 / itemLength;
+          radius = Math.round(250 / Math.tan(Math.PI / itemLength));
+
+          TweenMax.set(container, { perspective: 600 });
+          TweenMax.set(carousel, { z: -radius });
+
+          for (var i = 0; i < itemLength; i++) {
+            var $item = item.eq(i);
+            var $block = $item.find('.carouselItemInner');
+            TweenMax.set($item, { rotationY: rY * i, z: radius, transformOrigin: "50% 50% " + -radius + "px" });
+            animateIn($item, $block);
+          }
+
+          window.addEventListener("mousemove", onMouseMove, false);
+          ticker = setInterval(looper, 1000 / 60);
+        }
+
+        function animateIn($item, $block) {
+          var $nrX = 360 * getRandomInt(2);
+          var $nrY = 360 * getRandomInt(2);
+          var $nx = -2000 + getRandomInt(4000);
+          var $ny = -2000 + getRandomInt(4000);
+          var $nz = -4000 + getRandomInt(4000);
+          var $s = 1.5 + (getRandomInt(10) * 0.1);
+          var $d = 1 - (getRandomInt(8) * 0.1);
+
+          TweenMax.set($item, { autoAlpha: 1, delay: $d });
+          TweenMax.set($block, { z: $nz, rotationY: $nrY, rotationX: $nrX, x: $nx, y: $ny, autoAlpha: 0 });
+          TweenMax.to($block, $s, { delay: $d, rotationY: 0, rotationX: 0, z: 0, ease: Expo.easeInOut });
+          TweenMax.to($block, $s - 0.5, { delay: $d, x: 0, y: 0, autoAlpha: 1, ease: Expo.easeInOut });
+        }
+
+        function onMouseMove(event) {
+          mouseX = -(-(window.innerWidth * 0.5) + event.pageX) * 0.0025;
+          mouseY = -(-(window.innerHeight * 0.5) + event.pageY) * 0.01;
+          mouseZ = -radius - (Math.abs(-(window.innerHeight * 0.5) + event.pageY) - 200);
+        }
+
+        function looper() {
+          addX += mouseX;
+          TweenMax.to(carousel, 1, { rotationY: addX, rotationX: mouseY, ease: Quint.easeOut });
+          TweenMax.set(carousel, { z: mouseZ });
+          fps.text('Framerate: ' + counter.tick() + '/60 FPS');
+        }
+
+        function getRandomInt($n) {
+          return Math.floor(Math.random() * $n + 1);
+        }
+    </script>
+
+
+    <!-- Ubicación -->
+    <section class="ubicacion-section">
+        <div class="container text-center">
+            <h2 class="mb-4">📍 Nuestra Ubicación</h2>
+            <p>Visítanos en nuestra tienda física o haz tu pedido desde donde estés.</p>
+
+            <div class="mapa-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.5068968717826!2d-78.48529053047276!3d-0.18065323919384414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a3eac65f5db%3A0xf47bd59e71589a78!2sQuito%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1717728450123!5m2!1ses!2sec"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contactanos por whatsapp -->
+    <section class="contacto-section">
+        <div class="container text-center">
+            <h2 class="mb-4">📲 Contáctanos por WhatsApp</h2>
+            <p>¿Tienes alguna pregunta? Escríbenos y te ayudaremos de inmediato.</p>
+
+            <form id="whatsappForm" class="formulario-contacto mt-4">
+                <div class="mb-3">
+                    <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" id="mensaje" class="form-control" placeholder="¿En qué podemos ayudarte?" required>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- Contactanos por whatsapp  sript para enviar el mensaje por whatsap-->
+       <script>
+        document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            const numero = "593995511375"; // 👉 Reemplaza con tu número de WhatsApp (ej: 593987654321)
+            const texto = `Hola, soy ${nombre}. ${mensaje}`;
+
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+            window.open(url, "_blank"); // Abre en nueva pestaña
+        });
+    </script>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer-infruit mt-5 text-white text-center py-4">
+        <div class="container">
+            <p class="mb-3">Síguenos en nuestras redes:</p>
+
+            <div class="social-icons mb-4">
+                <a href="https://www.facebook.com/Infruit" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/Infruit" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+
+            <p class="mb-2">📧 <a href="mailto:info@infruit.com" class="footer-mail">info@infruit.com</a></p>
+            <p class="mb-0">&copy; 2025 - Infruit. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (necesario para carrusel y navbar colapsable) -->
+   
+
+    
+</body>
+</html>

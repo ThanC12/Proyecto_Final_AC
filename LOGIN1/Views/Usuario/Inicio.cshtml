@@ -1,0 +1,37 @@
+﻿@model List<LOGIN1.Models.Producto>
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center titulo-bienvenida mb-3">
+        Bienvenido @ViewData["Usuario"]
+    </h2>
+    <p class="text-center subtitulo-productos mb-4">Explora nuestros productos disponibles:</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var producto in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="@producto.ImagenUrl"
+                         class="card-img-top"
+                         alt="Imagen de @producto.Nombre" />
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-dark">@producto.Nombre</h5>
+                        <p class="card-text text-muted">
+                            <strong>Precio:</strong> $@producto.Precio.ToString("0.00")
+                        </p>
+
+                        <form asp-action="AgregarAlCarrito" asp-controller="Usuario" method="post">
+                            <input type="hidden" name="productoId" value="@producto.Id" />
+                            <button type="submit" class="btn btn-success w-100">
+                                Agregar al carrito 🛒
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

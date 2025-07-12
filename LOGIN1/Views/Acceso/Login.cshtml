@@ -1,0 +1,115 @@
+﻿@model LOGIN1.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-container">
+    <div class="login-form">
+        <h2>Iniciar Sesión</h2>
+
+        <form asp-controller="Acceso" asp-action="Login" method="post" novalidate>
+            <div>
+                <label asp-for="Correo"></label>
+                <input asp-for="Correo" type="email" placeholder="Correo Electrónico" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Clave"></label>
+                <input asp-for="Clave" type="password" placeholder="Contraseña" />
+                <span asp-validation-for="Clave" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit">Entrar</button>
+            </div>
+
+            @if (ViewData["Mensaje"] != null)
+            {
+                <div class="alert alert-danger">@ViewData["Mensaje"]</div>
+            }
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<style>
+    /* CONTENEDOR GENERAL */
+    .login-container {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f26522, #ffa94d);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* TARJETA DEL FORMULARIO */
+    .login-form {
+        background-color: #fff;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 400px;
+    }
+
+        /* TÍTULO */
+        .login-form h2 {
+            text-align: center;
+            color: #f26522;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* CAMPOS DE FORMULARIO */
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+            .login-form input:focus {
+                border-color: #f26522;
+                outline: none;
+            }
+
+        /* BOTÓN */
+        .login-form button {
+            width: 100%;
+            background-color: #f26522;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .login-form button:hover {
+                background-color: #d35400;
+            }
+
+    /* MENSAJE DE ERROR */
+    .text-danger,
+    .alert-danger {
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+
+</style>

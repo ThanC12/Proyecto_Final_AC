@@ -1,0 +1,47 @@
+﻿@model LOGIN1.Models.Producto
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
+<h2>Editar Producto</h2>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <!-- Campo: Nombre -->
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <!-- Campo: Precio -->
+    <div class="mb-3">
+        <label asp-for="Precio" class="form-label"></label>
+        <input asp-for="Precio" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <!-- Campo: Stock -->
+    <div class="mb-3">
+        <label asp-for="Stock" class="form-label"></label>
+        <input asp-for="Stock" class="form-control" />
+        <span asp-validation-for="Stock" class="text-danger"></span>
+    </div>
+
+    <!-- Selector: Categoría -->
+    <div class="mb-3">
+        <label asp-for="CategoriaId" class="form-label">Categoría</label>
+        <select asp-for="CategoriaId" class="form-select" asp-items="@(new SelectList(ViewBag.Categorias, "Id", "Nombre"))">
+            <option value="">Seleccione una categoría</option>
+        </select>
+        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+    </div>
+
+    <!-- Botón para actualizar -->
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

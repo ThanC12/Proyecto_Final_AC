@@ -1,0 +1,23 @@
+﻿<h3>Datos de la Tarjeta</h3>
+<form asp-action="ProcesarPago" method="post" class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Nombre en la tarjeta</label>
+        <input type="text" name="nombre" class="form-control" placeholder="Juan Pérez" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Número de tarjeta</label>
+        <input type="text" name="tarjeta" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" required>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Fecha de vencimiento</label>
+            <input type="text" name="exp" class="form-control" placeholder="MM/AA" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">CVV</label>
+            <input type="text" name="cvv" class="form-control" placeholder="123" maxlength="4" required>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Finalizar compra 💳</button>
+</form>

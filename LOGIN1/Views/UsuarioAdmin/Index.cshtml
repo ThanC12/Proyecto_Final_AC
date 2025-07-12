@@ -1,0 +1,36 @@
+﻿@model List<LOGIN1.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h2 class="mb-4">Lista de Usuarios</h2>
+
+<a asp-action="Create" class="btn btn-success mb-3">Agregar Usuario</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.IdUsuario</td>
+                <td>@usuario.NombreCompleto</td>
+                <td>@usuario.Correo</td>
+                <td>@usuario.Rol?.Nombre</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@usuario.IdUsuario" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@usuario.IdUsuario" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

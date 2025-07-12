@@ -1,0 +1,103 @@
+﻿@model LOGIN1.ViewModels.UsuarioVM
+
+@{
+    ViewData["Title"] = "Registrarse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Registrarse</h2>
+
+    <form asp-controller="Acceso" asp-action="Registrarse" method="post" class="mx-auto" style="max-width: 500px;" novalidate>
+
+        <div class="mb-3">
+            <label asp-for="NombreCompleto" class="form-label"></label>
+            <input asp-for="NombreCompleto" class="form-control" placeholder="Nombre Completo" />
+            <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Correo" class="form-label"></label>
+            <input asp-for="Correo" type="email" class="form-control" placeholder="Correo Electrónico" />
+            <span asp-validation-for="Correo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Clave" class="form-label"></label>
+            <input asp-for="Clave" type="password" class="form-control" placeholder="Contraseña" />
+            <span asp-validation-for="Clave" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ConfirmarClave" class="form-label"></label>
+            <input asp-for="ConfirmarClave" type="password" class="form-control" placeholder="Confirmar Contraseña" />
+            <span asp-validation-for="ConfirmarClave" class="text-danger"></span>
+        </div>
+
+        <input type="hidden" asp-for="RolId" value="2" />
+
+        <button type="submit" class="btn btn-success w-100">Registrarse</button>
+
+        @if (ViewData["Mensaje"] != null)
+        {
+            <div class="alert alert-danger mt-3">@ViewData["Mensaje"]</div>
+        }
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+    
+
+    /* TÍTULO */
+    h2.text-center {
+        color: #f26522;
+        font-weight: bold;
+    }
+
+    /* INPUTS Y LABELS */
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        padding: 10px;
+        transition: border-color 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #f26522;
+            box-shadow: 0 0 0 0.2rem rgba(242, 101, 34, 0.25);
+        }
+
+    .form-label {
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* BOTÓN */
+    .btn-success {
+        background-color: #f26522;
+        border: none;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-success:hover {
+            background-color: #d35400;
+        }
+
+    /* MENSAJES DE ERROR */
+    .text-danger,
+    .alert-danger {
+        font-size: 0.9rem;
+    }
+
+</style>
+
+ 
