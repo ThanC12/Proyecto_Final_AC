@@ -26,22 +26,7 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <!-- ... código de navbar ... -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-controller="Producto" asp-action="Index">Productos</a>
-                </li>
-                <!-- Menú desplegable de categorías -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown">
-                        Productos por Categoría
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+      <ul class="dropdown-menu" aria-labelledby="productosDropdown">
                         @* Iterar sobre categorías desde la base de datos *@
                         @foreach (var categoria in _context.Categorias.ToList())
                         {
@@ -279,7 +264,7 @@
     <!-- Contactanos por whatsapp -->
     <section class="contacto-section">
         <div class="container text-center">
-            <h2 class="mb-4">📲 Contáctanos por WhatsApp</h2>
+            <h2 class="mb-4"> Contáctanos por WhatsApp</h2>
             <p>¿Tienes alguna pregunta? Escríbenos y te ayudaremos de inmediato.</p>
 
             <form id="whatsappForm" class="formulario-contacto mt-4">
@@ -303,7 +288,7 @@
             const nombre = document.getElementById("nombre").value;
             const mensaje = document.getElementById("mensaje").value;
 
-            const numero = "593995511375"; // 👉 Reemplaza con tu número de WhatsApp (ej: 593987654321)
+            const numero = "593995511375"; 
             const texto = `Hola, soy ${nombre}. ${mensaje}`;
 
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;

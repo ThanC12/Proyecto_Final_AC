@@ -45,12 +45,12 @@ namespace LOGIN1.Controllers
 
             if (usuario != null)
             {
-                // ✅ Guardar datos básicos en sesión
+                // Guardar datos básicos en sesión
                 HttpContext.Session.SetString("Nombre", usuario.NombreCompleto);
                 HttpContext.Session.SetInt32("UsuarioId", usuario.IdUsuario);
                 HttpContext.Session.SetInt32("RolId", usuario.RolId);
 
-                // ✅ Crear claims para autenticación basada en roles
+                // Crear claims para autenticación basada en roles
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, usuario.NombreCompleto),
@@ -87,7 +87,7 @@ namespace LOGIN1.Controllers
         {
             var vm = new UsuarioVM
             {
-                Roles = new List<SelectListItem>() // Se deja vacío si el rol se asigna automáticamente
+                Roles = new List<SelectListItem>() 
             };
 
             return View(vm);
@@ -109,7 +109,7 @@ namespace LOGIN1.Controllers
                 return View(modelo);
             }
 
-            // ✅ Crear nuevo usuario con RolId = 2 (Cliente)
+            //  Crear nuevo usuario con RolId = 2 (Cliente)
             var nuevoUsuario = new Usuario
             {
                 NombreCompleto = modelo.NombreCompleto,
@@ -121,7 +121,7 @@ namespace LOGIN1.Controllers
             await _context.Usuarios.AddAsync(nuevoUsuario);
             await _context.SaveChangesAsync();
 
-            // ✅ Redirige si se guardó correctamente
+            //  Redirige si se guardó correctamente
             if (nuevoUsuario.IdUsuario != 0)
                 return RedirectToAction("Login");
 
@@ -129,7 +129,7 @@ namespace LOGIN1.Controllers
             return View(modelo);
         }
 
-        // ✅ Cierre de sesión
+        //  Cierre de sesión
         public async Task<IActionResult> Logout()
         {
             // Cerrar sesión de autenticación y limpiar la sesión de variables
@@ -138,7 +138,7 @@ namespace LOGIN1.Controllers
             return RedirectToAction("Login");
         }
 
-        // ✅ Vista para cuando un usuario intenta acceder sin autorización
+        //  Vista para cuando un usuario intenta acceder sin autorización
         [HttpGet]
         public IActionResult Denegado()
         {

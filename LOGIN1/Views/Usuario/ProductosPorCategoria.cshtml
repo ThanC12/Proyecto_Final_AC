@@ -1,0 +1,37 @@
+@model List<LOGIN1.Models.Producto>
+
+@{
+    ViewData["Title"] = "Productos por Categoría";
+}
+
+<h2 class="mb-4">Productos en: @ViewBag.Categoria</h2>
+
+@if (Model.Any())
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var producto in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="@Url.Content(producto.ImagenUrl)" class="card-img-top" alt="@producto.Nombre" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@producto.Nombre</h5>
+                        <p class="card-text text-success fw-bold">$@producto.Precio</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <form asp-controller="Usuario" asp-action="AgregarAlCarrito" method="post">
+                            <input type="hidden" name="productoId" value="@producto.Id" />
+                            <button type="submit" class="btn btn-success w-100">Agregar al carrito</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="alert alert-info">
+        No hay productos en esta categoría.
+    </div>
+}

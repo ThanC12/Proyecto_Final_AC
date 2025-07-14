@@ -24,7 +24,7 @@ public class UsuarioController : Controller
             .Include(p => p.Categoria)
             .ToList();
 
-        return View("Producto", productos); // ✅ No requiere login
+        return View("Producto", productos); //  No requiere login
     }
 
     // ==========================
@@ -38,7 +38,7 @@ public class UsuarioController : Controller
             .ToList();
 
         ViewBag.NombreCategoria = _context.Categorias.Find(id)?.Nombre;
-        return View("Producto", productos); // ✅ Usa la misma vista
+        return View("Producto", productos); //  Usa la misma vista
     }
 
     // ==========================
@@ -118,6 +118,24 @@ public class UsuarioController : Controller
 
         return RedirectToAction("VerCarrito");
     }
+
+     // ==========================
+    // Productos por Categria
+    // ==========================
+    
+
+    public IActionResult ProductosPorCategoria(string categoria)
+    {
+        var productos = _context.Productos
+            .Include(p => p.Categoria)
+            .Where(p => p.Categoria.Nombre == categoria)
+            .ToList();
+
+        ViewBag.Categoria = categoria;
+        return View(productos); // envía la lista de productos a la vista
+    }
+
+    
 
     // ==========================
     // OPCIONAL: Insertar productos de prueba
