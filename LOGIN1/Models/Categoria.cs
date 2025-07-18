@@ -8,7 +8,7 @@ namespace LOGIN1.Models
 
         [Required]
         [StringLength(50)]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
         // Relación con productos (opcional)
         public ICollection<Producto>? Productos { get; set; }

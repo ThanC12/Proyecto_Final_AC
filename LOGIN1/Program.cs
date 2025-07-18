@@ -36,7 +36,7 @@ app.UseAuthentication();    // Activar autenticación
 app.UseAuthorization();     // Activar autorización
 
 // 5. Rotativa (PDF) debe ir antes de app.Run()
-app.UseRotativa(); // ✅ ¡ESTA LÍNEA DEBE IR AQUÍ!
+app.UseRotativa(); //  ¡ESTA LÍNEA DEBE IR AQUÍ!
 
 // 6. Ruta por defecto
 app.MapControllerRoute(
