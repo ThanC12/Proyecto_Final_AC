@@ -1,0 +1,522 @@
+@model LOGIN1.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "Nosotros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosotros - Infruit</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+           
+        }
+
+        /* NAVBAR STYLES */
+        .navbar {
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #fff3e0 !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+
+        .dropdown-item {
+            color: #333;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f26522;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(242, 101, 34, 0.1), rgba(255, 140, 66, 0.1));
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            color: #f26522;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .story-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(242, 101, 34, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-left: 5px solid #f26522;
+        }
+
+        .values-section {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 80px 0;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid #f26522;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #f26522;
+            margin-bottom: 20px;
+        }
+
+        .commitment-section {
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .commitment-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .team-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid #f26522;
+        }
+
+        .team-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .footer-infruit {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+
+        .footer-mail {
+            color: #f26522;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #f26522;
+        }
+
+        .stats-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f26522;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .orange-text {
+            color: #f26522;
+        }
+
+        .btn-orange {
+            background-color: #f26522;
+            border-color: #f26522;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background-color: #e55a1e;
+            border-color: #e55a1e;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto hero-content text-center">
+                    <h1 class="display-4 mb-4">Conoce a <span class="fw-bold">INFRUIT</span></h1>
+                    <p class="lead mb-4">Somos una empresa comprometida con la naturaleza, dedicada a ofrecerte los mejores productos de frutas frescas del Ecuador.</p>
+                    <a href="#nuestra-historia" class="btn btn-light btn-lg">
+                        <i class="fas fa-arrow-down"></i> Conoce nuestra historia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section id="nuestra-historia" class="story-section">
+        <div class="container">
+            <h2 class="section-title">📖 Nuestra Historia</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="story-card">
+                        <h3 class="orange-text mb-3">El Origen de INFRUIT</h3>
+                        <p class="lead">INFRUIT nació del sueño de llevar la frescura y sabor auténtico de las frutas ecuatorianas a cada hogar. Fundada por una familia apasionada por la agricultura sostenible, comenzamos como un pequeño emprendimiento local que creía en el poder nutritivo de nuestras tierras.</p>
+                        <p>Desde nuestros inicios, hemos mantenido el compromiso de ofrecer productos 100% naturales, preservando tanto el sabor como las propiedades nutricionales de cada fruta. Nuestra misión es conectar a las familias ecuatorianas con la naturaleza a través de productos frescos, saludables y de la más alta calidad.</p>
+                        <p>A lo largo de los años, hemos crecido manteniendo nuestros valores fundamentales: respeto por el medio ambiente, apoyo a los productores locales y compromiso con la excelencia en cada producto que ofrecemos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Productos Naturales</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Clientes Satisfechos</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Productos Orgánicos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS VALORES -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">🌟 Nuestros Valores</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="orange-text">Sostenibilidad</h4>
+                        <p>Trabajamos con prácticas agrícolas responsables que respetan el medio ambiente y preservan la biodiversidad de nuestros ecosistemas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="orange-text">Calidad</h4>
+                        <p>Cada producto pasa por rigurosos controles de calidad para garantizar que llegue a tu mesa con la máxima frescura y sabor.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="orange-text">Compromiso</h4>
+                        <p>Estamos comprometidos con nuestros clientes, productores locales y el desarrollo de comunidades rurales ecuatorianas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPROMISO AMBIENTAL -->
+    <section class="commitment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4 text-center">🌍 Compromiso con el Ambiente</h2>
+                    <div class="commitment-card">
+                        <h4><i class="fas fa-recycle"></i> Empaques Sostenibles</h4>
+                        <p>Utilizamos materiales biodegradables y reciclables para reducir nuestro impacto ambiental. Cada envase está diseñado pensando en el futuro del planeta.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <h4><i class="fas fa-tint"></i> Uso Responsable del Agua</h4>
+                        <p>Implementamos sistemas de riego eficientes que optimizan el uso del agua en nuestros cultivos, contribuyendo a la conservación de este recurso vital.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <h4><i class="fas fa-seedling"></i> Agricultura Orgánica</h4>
+                        <p>Nuestros productos están libres de pesticidas y químicos dañinos, cuidando tu salud y la del planeta. Creemos en la agricultura natural y sostenible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRO EQUIPO -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">👥 Nuestro Equipo</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="team-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="orange-text">RommelJuarez</h4>
+                        <p class="text-muted">front end developer</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="team-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4 class="orange-text">Jonnathan Cordero</h4>
+                        <p class="text-muted">DEVELOPER</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="team-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="orange-text">Bryan Sanchez</h4>
+                        <p class="text-muted">DEVELOPER</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LLAMADA A LA ACCIÓN -->
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="orange-text mb-4">¿Te gustó conocer nuestra historia?</h2>
+            <p class="lead mb-4">Únete a nuestra familia y disfruta de los mejores productos naturales del Ecuador</p>
+            <a href="#" class="btn btn-orange btn-lg me-3">
+                <i class="fas fa-shopping-cart"></i> Ver Productos
+            </a>
+            <a href="#" class="btn btn-outline-secondary btn-lg">
+                <i class="fas fa-phone"></i> Más Información
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-infruit text-white text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-leaf"></i> INFRUIT
+                    </h5>
+                    <p>Frutas frescas y naturales del Ecuador para tu mesa.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Información</h5>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope"></i> 
+                        <a href="mailto:info@infruit.com" class="footer-mail">info@infruit.com</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone"></i> +593 99 551 1375
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-map-marker-alt"></i> Quito, Ecuador
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Infruit" target="_blank" title="Facebook" class="me-3">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/Infruit" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0">&copy; 2025 - Infruit. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth scrolling for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(242, 101, 34, 0.95)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #f26522 0%, #ff8c42 100%)';
+            }
+        });
+    </script>
+</body>
+</html>
