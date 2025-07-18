@@ -1,0 +1,511 @@
+@model LOGIN1.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - INFRUIT</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(242, 101, 34, 0.1), rgba(255, 140, 66, 0.1));
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            color: #f26522;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .orange-text {
+            color: #f26522;
+        }
+
+        .btn-orange {
+            background-color: #f26522;
+            border-color: #f26522;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #e55a1e;
+            border-color: #e55a1e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(242, 101, 34, 0.3);
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(242, 101, 34, 0.1);
+            padding: 40px;
+            border-left: 5px solid #f26522;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #f26522;
+            box-shadow: 0 0 0 0.2rem rgba(242, 101, 34, 0.25);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f26522 0%, #ff8c42 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .social-section {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 60px 0;
+        }
+
+        .social-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-facebook {
+            background: #3b5998;
+            color: white;
+        }
+
+        .btn-facebook:hover {
+            background: #2d4373;
+            color: white;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+        }
+
+        .btn-instagram:hover {
+            background: linear-gradient(45deg, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128c7e;
+            color: white;
+        }
+
+        .btn-email {
+            background: #ea4335;
+            color: white;
+        }
+
+        .btn-email:hover {
+            background: #c23321;
+            color: white;
+        }
+
+        .map-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(242, 101, 34, 0.1);
+            height: 450px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer-infruit {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-mail {
+            color: #f26522;
+            text-decoration: none;
+        }
+
+        .footer-mail:hover {
+            color: #ff8c42;
+        }
+
+        .quick-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .quick-contact .btn {
+            border-radius: 50px;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto hero-content text-center">
+                    <h1 class="display-4 mb-4">📞 <span class="fw-bold">Contáctanos</span></h1>
+                    <p class="lead mb-4">Estamos aquí para ayudarte. Escríbenos y nos pondremos en contacto contigo lo antes posible.</p>
+                    <a href="#formulario" class="btn btn-light btn-lg">
+                        <i class="fas fa-arrow-down"></i> Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="formulario" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h2 class="orange-text mb-4">📝 Envíanos un Mensaje</h2>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="asunto" class="form-label">Asunto *</label>
+                                    <select class="form-control" id="asunto" name="asunto" required>
+                                        <option value="">Selecciona un asunto</option>
+                                        <option value="informacion">Información de Productos</option>
+                                        <option value="pedido">Realizar Pedido</option>
+                                        <option value="queja">Queja o Reclamo</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="distribucion">Distribución</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="acepto" name="acepto" required>
+                                <label class="form-check-label" for="acepto">
+                                    Acepto el tratamiento de mis datos personales según la política de privacidad
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-orange btn-lg">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3 class="mb-4">📍 Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Dirección</h5>
+                                <p class="mb-0">Quito, Ecuador<br>Av. Principal 123</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Teléfono</h5>
+                                <p class="mb-0">+593 99 551 1375</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="mb-0">info@infruit.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Horario</h5>
+                                <p class="mb-0">Lun - Vie: 8:00 AM - 6:00 PM<br>Sáb: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REDES SOCIALES -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title">🌐 Síguenos en Redes Sociales</h2>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="https://www.facebook.com/Infruit" target="_blank" class="social-button btn-facebook">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/Infruit" target="_blank" class="social-button btn-instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://wa.me/593995511375?text=Hola%20INFRUIT,%20me%20gustaría%20obtener%20información%20sobre%20sus%20productos" target="_blank" class="social-button btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:info@infruit.com?subject=Consulta%20desde%20la%20web" class="social-button btn-email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">📍 Encuéntranos</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.799267246915!2d-78.50678668573225!3d-0.18008979983750948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284c4d8f3b3a4!2sQuito%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1703859200000!5m2!1ses!2sec" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-infruit text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-leaf"></i> INFRUIT
+                    </h5>
+                    <p>Frutas frescas y naturales del Ecuador para tu mesa.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Contacto Directo</h5>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope"></i> 
+                        <a href="mailto:info@infruit.com" class="footer-mail">info@infruit.com</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-phone"></i> +593 99 551 1375
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-map-marker-alt"></i> Quito, Ecuador
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Horario de Atención</h5>
+                    <p class="mb-1">Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                    <p class="mb-1">Sábado: 9:00 AM - 4:00 PM</p>
+                    <p class="mb-0">Domingo: Cerrado</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0">&copy; 2025 - INFRUIT. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <div class="quick-contact">
+        <a href="https://wa.me/593995511375?text=Hola%20INFRUIT,%20me%20gustaría%20obtener%20información%20sobre%20sus%20productos" target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add animation to contact items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
