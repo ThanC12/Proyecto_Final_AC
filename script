@@ -1,0 +1,17 @@
+CREATE DATABASE LOGIN1DB;
+GO
+
+USE LOGIN1DB;
+GO
+
+CREATE TABLE Usuarios (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(100),
+    Correo NVARCHAR(100)
+);
+GO
+
+INSERT INTO Usuarios (Nombre, Correo) VALUES 
+('Jonathan Bravo', 'jonathan@ejemplo.com'),
+
+GO
